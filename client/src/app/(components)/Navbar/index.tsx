@@ -10,6 +10,7 @@ import {
 	SettingsIcon,
 	SunIcon,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -80,7 +81,15 @@ const Navbar = () => {
 					</div>
 					<hr className=" w-0 h-7 border-solid border-l border-gray-300 mx-3" />
 					<div className=" flex items-center gap-3 cursor-pointer">
-						<div className=" size-9">image</div>
+						<div className=" size-9">
+							<Image
+								src="https://s3-inventory-management-kasubonteng.s3.eu-west-2.amazonaws.com/profile.jpg"
+								alt="profile"
+								width={50}
+								height={50}
+								className=" rounded-full h-full object-cover"
+							/>
+						</div>
 						<span className=" font-semibold">your name</span>
 					</div>
 					<Link href="/settings">
